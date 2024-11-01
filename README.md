@@ -4,15 +4,16 @@
 Basicamente, utilizei o dataset do [mbpp](https://huggingface.co/datasets/google-research-datasets/mbpp), que contém descrições de problemas de programação juntamente com solução e testes da solução, para observar como o Llama 3.1 70B cria sua própria suíte de testes por meio de uma integração com RAG simples. O que fiz foi criar uma cópia de cada problema removendo a suíte de testes e solicitando para a LLM criar a sua própria. Uma vez isso feito, comparei o quão bem sucedida a LLM se saiu principalmente em comparação com os testes do próprio dataset que apontam sucesso nos seus códigos de resolução de problemas.
 
 ## Como rodar?
-Para rodar o script, basta executar esse comando `pip` para instalar as dependências:
+1. Instalar a dependência do `Groq` com `pip`:
 ```bash
-pip install llama-index-core llama-index-llms-ollama llama-index-embeddings-huggingface llama-index-llms-groq llama-index-readers-json
+pip install groq
 ```
-Uma vez instalado, basta executar no root do projeto o comando: 
+2. Crie sua própria chave da API do Groq para poder rodar o Llama3.1 [aqui](https://console.groq.com/keys). Salve a chave em uma variável de ambiente com o nome `GROQ_API_KEY`
+3. Execute o script no root do projeto o comando: 
 ```bash
 python ./mbpp_script.py
 ```
-Os resultados estarão presentes nos arquivos locais `error_logs.txt` e `prompt history.txt`
+> Os resultados estarão presentes nos arquivos locais `error_logs.txt` e `prompt_history.md`
 
 ## Interpretações de "erros na geração de teste"
 - Em momentos de teste e análise do conteúdo "errado" da LLM, encontrei pérolas como `ERROR IN LLM TEST EXECUTION: assert is_not_prime(1) == True (question id: 3)`🤦‍♂️
@@ -27,20 +28,21 @@ Os resultados estarão presentes nos arquivos locais `error_logs.txt` e `prompt 
 - O arquivo `error_logs.txt` citado anteriormente guarda todos os erros logados do script
 
 ## Melhorias em prompt
-- o arquivo `prompt_history.txt`, citado anteriormente, guarda todo o histórico de prompts que utilizei quando o script estava finalizado, juntamente com alguns dados estatísticos referentes a aquela execução em específico. De modo geral, houve uma melhora significativa com adição de elementos de engenharia de prompt, como few-shot prompting, esclarecimento de output e afins. Questões mais complexas foram mais difíceis de fazer a LLM passar, naturalmente.
+- o arquivo `prompt_history.md`, citado anteriormente, guarda todo o histórico de prompts que utilizei quando o script estava finalizado, juntamente com alguns dados estatísticos referentes a aquela execução em específico. De modo geral, houve uma melhora significativa com adição de elementos de engenharia de prompt, como few-shot prompting, esclarecimento de output e afins. Questões mais complexas foram mais difíceis de fazer a LLM passar, naturalmente.
 
 ## Resultados finais
-Foram gerados X casos de teste para Y problemas. De modo geral, os resultados obtidos com LLM foram:
-- Testes compilados com sucesso: %
-- Testes que aprovaram o código gerado: %
-- Problemas que passaram em todos os testes: %
+Foram gerados 443 casos de teste para 90 problemas. De modo geral, os resultados obtidos com LLM foram:
+- Testes compilados com sucesso: 95%
+- Testes que aprovaram o código gerado: 60%
+- Problemas que passaram em todos os testes: 36%
 > P.S.: Não houveram erros em testes do próprio dataset
 
 ## Conclusões: Como isso pode contribuir para nosso projeto?
-Brincar com esse dataset me ajudou a ter um pouco mais de noção em uso e consumo de RAG, que muito provavelmente vamos usar no contexto do projeto, vale a pena com certeza dar uma olhada... Além disso, esses resultados me mostraram um pouco mais sobre a importância de prompt engineering e que nem sempre o culpado vai ser a LLM que fez seu trabalho muitas vezes até bem feito!
+Isso é uma ótima forma de vermos, na prática, o impacto que a qualidade do prompt informado impacta na geração de casos de teste! Pode não ser o contexto 100% alocado com o nosso caso (já que provavelmente vamos utilizar Selenium em testes black box) mas a essência permanece quanto a importância do uso de técnicas de Prompt Engineering
 
 ## Contribuindo com o script...
-Minhas maiores indagações em como melhorar esse script consistem em:
-- Adaptar o código para utilizar apenas a descrição (acredito ser o mais urgente, por hora)
-- Como identificar falsos positivos e falsos negativos no script?
-- Como acertar qual é o culpado do teste falho de forma automatizada?
+- Se possível, tente versões diferentes de prompt para analisar como a LLM se comporta!!
+- Minhas maiores indagações em como melhorar esse script consistem em:
+  - Adaptar o código para utilizar apenas a descrição (acredito ser o mais urgente, por hora)
+  - Como identificar falsos positivos e falsos negativos no script?
+  - Como acertar qual é o culpado do teste falho de forma automatizada?
