@@ -3,6 +3,17 @@
 ## O que foi feito?
 Basicamente, utilizei o dataset do [mbpp](https://huggingface.co/datasets/google-research-datasets/mbpp), que contém descrições de problemas de programação juntamente com solução e testes da solução, para observar como o Llama 3.1 70B cria sua própria suíte de testes por meio de uma integração com RAG simples. O que fiz foi criar uma cópia de cada problema removendo a suíte de testes e solicitando para a LLM criar a sua própria. Uma vez isso feito, comparei o quão bem sucedida a LLM se saiu principalmente em comparação com os testes do próprio dataset que apontam sucesso nos seus códigos de resolução de problemas.
 
+## Como rodar?
+Para rodar o script, basta executar esse comando `pip` para instalar as dependências:
+```bash
+pip install llama-index-core llama-index-llms-ollama llama-index-embeddings-huggingface llama-index-llms-groq llama-index-readers-json
+```
+Uma vez instalado, basta executar no root do projeto o comando: 
+```bash
+python ./mbpp_script.py
+```
+Os resultados estarão presentes nos arquivos locais `error_logs.txt` e `prompt history.txt`
+
 ## Interpretações de "erros na geração de teste"
 - Em momentos de teste e análise do conteúdo "errado" da LLM, encontrei pérolas como `ERROR IN LLM TEST EXECUTION: assert is_not_prime(1) == True (question id: 3)`🤦‍♂️
 - De quem é a culpa? Bem, no fim das contas, devemos analisar tudo como "pode haver problema com":
@@ -13,10 +24,10 @@ Basicamente, utilizei o dataset do [mbpp](https://huggingface.co/datasets/google
   - Eu mesmo que posso ter feito o script com algum defeito rs (ninguém é perfeito)
 - Gostaria de ter removido todos os outros possíveis causadores de problema da jogada para analisar apenas o desempenho da LLM, mas é um dataset imenso para análise manual...
 - Acredito que uma boa prática é analisar sempre os logs e o contexto antes de apontar o dedo para um desses cinco
-- Criei um arquivo `error_logs.txt` que guarda todos os erros logados do script
+- O arquivo `error_logs.txt` citado anteriormente guarda todos os erros logados do script
 
 ## Melhorias em prompt
-- o arquivo `prompt_history.txt` guarda todo o histórico de prompts que utilizei quando o script estava finalizado. De modo geral, houve uma melhora significativa com adição de elementos de engenharia de prompt, como few-shot prompting, esclarecimento de output e afins. Questões mais complexas foram mais difíceis de fazer a LLM passar, naturalmente.
+- o arquivo `prompt_history.txt`, citado anteriormente, guarda todo o histórico de prompts que utilizei quando o script estava finalizado, juntamente com alguns dados estatísticos referentes a aquela execução em específico. De modo geral, houve uma melhora significativa com adição de elementos de engenharia de prompt, como few-shot prompting, esclarecimento de output e afins. Questões mais complexas foram mais difíceis de fazer a LLM passar, naturalmente.
 
 ## Resultados finais
 Foram gerados X casos de teste para Y problemas. De modo geral, os resultados obtidos com LLM foram:
