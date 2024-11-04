@@ -28,7 +28,7 @@ python ./mbpp_script.py
 - O arquivo `results/error_logs.txt` guarda todos os erros logados do script
 
 ## Melhorias em prompt
-- o arquivo `results/prompt_history.md`, citado anteriormente, guarda todo o histórico de prompts que utilizei quando o script estava finalizado, juntamente com alguns dados estatísticos referentes a aquela execução em específico. De modo geral, houve uma melhora significativa com adição de elementos de engenharia de prompt, como few-shot prompting, esclarecimento de output e afins. Questões mais complexas foram mais difíceis de fazer a LLM passar, naturalmente.
+- o arquivo `results/prompt_history.md` guarda todo o histórico de prompts que utilizei quando o script estava finalizado, juntamente com alguns dados estatísticos referentes a aquela execução em específico. De modo geral, houve uma melhora significativa com adição de elementos de engenharia de prompt, como few-shot prompting, esclarecimento de output e afins. Questões mais complexas foram mais difíceis de fazer a LLM passar, naturalmente.
 
 ## Resultados finais
 Foram gerados aproximadamente 450 casos de teste para 90 problemas. De modo geral, os resultados médios obtidos com 10 runs desse script foram:
