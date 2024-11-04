@@ -256,7 +256,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 626,
       "prompt": "Write a python function to find the area of the largest triangle that can be inscribed in a semicircle with a given radius.",
-      "code": "def triangle_area(r) :  \n    if r < 0 : \n        return None\n    return r * r ",
+      "code": "def triangle_area(r):  \n    if r < 0 : \n        return None\n    return r * r ",
       "test_imports": [],
       "test_list": [
         "assert triangle_area(-1) == None",
@@ -340,7 +340,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 633,
       "prompt": "Write a python function to find the sum of xor of all pairs of numbers in the given list.",
-      "code": "def pair_xor_Sum(arr,n) : \n    ans = 0 \n    for i in range(0,n) :    \n        for j in range(i + 1,n) :   \n            ans = ans + (arr[i] ^ arr[j])          \n    return ans ",
+      "code": "def pair_xor_Sum(arr,n): \n    ans = 0 \n    for i in range(0,n):    \n        for j in range(i + 1,n):   \n            ans = ans + (arr[i] ^ arr[j])          \n    return ans ",
       "test_imports": [],
       "test_list": [
         "assert pair_xor_Sum([5,9,7,6],4) == 47",
@@ -684,7 +684,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 741,
       "prompt": "Write a python function to check whether all the characters are same or not.",
-      "code": "def all_Characters_Same(s) :\n    n = len(s)\n    for i in range(1,n) :\n        if s[i] != s[0] :\n            return False\n    return True",
+      "code": "def all_Characters_Same(s):\n    n = len(s)\n    for i in range(1,n):\n        if s[i] != s[0] :\n            return False\n    return True",
       "test_imports": [],
       "test_list": [
         "assert all_Characters_Same(\"python\") == False",
@@ -1020,7 +1020,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 770,
       "prompt": "Write a python function to find the sum of fourth power of first n odd natural numbers.",
-      "code": "def odd_num_sum(n) : \n    j = 0\n    sm = 0\n    for i in range(1,n + 1) : \n        j = (2*i-1) \n        sm = sm + (j*j*j*j)   \n    return sm ",
+      "code": "def odd_num_sum(n): \n    j = 0\n    sm = 0\n    for i in range(1,n + 1): \n        j = (2*i-1) \n        sm = sm + (j*j*j*j)   \n    return sm ",
       "test_imports": [],
       "test_list": [
         "assert odd_num_sum(2) == 82",
@@ -1141,7 +1141,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 781,
       "prompt": "Write a python function to check whether the count of divisors is even. https://www.w3resource.com/python-exercises/basic/python-basic-1-exercise-24.php",
-      "code": "import math \ndef count_divisors(n) : \n    count = 0\n    for i in range(1, (int)(math.sqrt(n)) + 2) : \n        if (n % i == 0) : \n            if( n // i == i) : \n                count = count + 1\n            else : \n                count = count + 2\n    return count % 2 == 0",
+      "code": "import math \ndef count_divisors(n): \n    count = 0\n    for i in range(1, (int)(math.sqrt(n)) + 2): \n        if (n % i == 0): \n            if( n // i == i): \n                count = count + 1\n            else : \n                count = count + 2\n    return count % 2 == 0",
       "test_imports": [],
       "test_list": [
         "assert count_divisors(10)",
@@ -1391,7 +1391,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 803,
       "prompt": "Write a function to check whether the given number is a perfect square or not. https://www.geeksforgeeks.org/check-if-given-number-is-perfect-square-in-cpp/",
-      "code": "def is_perfect_square(n) :\n    i = 1\n    while (i * i<= n):\n        if ((n % i == 0) and (n / i == i)):\n            return True     \n        i = i + 1\n    return False",
+      "code": "def is_perfect_square(n):\n    i = 1\n    while (i * i<= n):\n        if ((n % i == 0) and (n / i == i)):\n            return True     \n        i = i + 1\n    return False",
       "test_imports": [],
       "test_list": [
         "assert not is_perfect_square(10)",

@@ -411,7 +411,7 @@
     {
       "task_id": 545,
       "text": "Write a python function to toggle only first and last bits of a given number.",
-      "code": "def take_L_and_F_set_bits(n) : \r\n    n = n | n >> 1\r\n    n = n | n >> 2\r\n    n = n | n >> 4\r\n    n = n | n >> 8\r\n    n = n | n >> 16 \r\n    return ((n + 1) >> 1) + 1      \r\ndef toggle_F_and_L_bits(n) :  \r\n    if (n == 1) : \r\n        return 0 \r\n    return n ^ take_L_and_F_set_bits(n) ",
+      "code": "def take_L_and_F_set_bits(n): \r\n    n = n | n >> 1\r\n    n = n | n >> 2\r\n    n = n | n >> 4\r\n    n = n | n >> 8\r\n    n = n | n >> 16 \r\n    return ((n + 1) >> 1) + 1      \r\ndef toggle_F_and_L_bits(n):  \r\n    if (n == 1): \r\n        return 0 \r\n    return n ^ take_L_and_F_set_bits(n) ",
       "test_list": [
         "assert toggle_F_and_L_bits(10) == 3",
         "assert toggle_F_and_L_bits(15) == 6",
@@ -459,7 +459,7 @@
     {
       "task_id": 549,
       "text": "Write a python function to find the sum of fifth power of first n odd natural numbers.",
-      "code": "def odd_Num_Sum(n) : \r\n    j = 0\r\n    sm = 0\r\n    for i in range(1,n+1) : \r\n        j = (2*i-1) \r\n        sm = sm + (j*j*j*j*j)     \r\n    return sm ",
+      "code": "def odd_Num_Sum(n): \r\n    j = 0\r\n    sm = 0\r\n    for i in range(1,n+1): \r\n        j = (2*i-1) \r\n        sm = sm + (j*j*j*j*j)     \r\n    return sm ",
       "test_list": [
         "assert odd_Num_Sum(1) == 1",
         "assert odd_Num_Sum(2) == 244",
@@ -531,7 +531,7 @@
     {
       "task_id": 555,
       "text": "Write a python function to find the difference between sum of cubes of first n natural numbers and the sum of first n natural numbers.",
-      "code": "def difference(n) :  \r\n    S = (n*(n + 1))//2;  \r\n    res = S*(S-1);  \r\n    return res;  ",
+      "code": "def difference(n):  \r\n    S = (n*(n + 1))//2;  \r\n    res = S*(S-1);  \r\n    return res;  ",
       "test_list": [
         "assert difference(3) == 30",
         "assert difference(5) == 210",
@@ -543,7 +543,7 @@
     {
       "task_id": 556,
       "text": "Write a python function to count the pairs with xor as an odd number.",
-      "code": "def find_Odd_Pair(A,N) : \r\n    oddPair = 0\r\n    for i in range(0,N) :  \r\n        for j in range(i+1,N) :  \r\n            if ((A[i] ^ A[j]) % 2 != 0):  \r\n                oddPair+=1  \r\n    return oddPair  ",
+      "code": "def find_Odd_Pair(A,N): \r\n    oddPair = 0\r\n    for i in range(0,N):  \r\n        for j in range(i+1,N):  \r\n            if ((A[i] ^ A[j]) % 2 != 0):  \r\n                oddPair+=1  \r\n    return oddPair  ",
       "test_list": [
         "assert find_Odd_Pair([5,4,7,2,1],5) == 6",
         "assert find_Odd_Pair([7,2,8,1,0,5,11],7) == 12",
@@ -1011,7 +1011,7 @@
     {
       "task_id": 595,
       "text": "Write a python function to count minimum number of swaps required to convert one binary string to another.",
-      "code": "def min_Swaps(str1,str2) : \r\n    count = 0\r\n    for i in range(len(str1)) :  \r\n        if str1[i] != str2[i] : \r\n            count += 1\r\n    if count % 2 == 0 : \r\n        return (count // 2) \r\n    else : \r\n        return (\"Not Possible\") ",
+      "code": "def min_Swaps(str1,str2): \r\n    count = 0\r\n    for i in range(len(str1)):  \r\n        if str1[i] != str2[i] : \r\n            count += 1\r\n    if count % 2 == 0 : \r\n        return (count // 2) \r\n    else : \r\n        return (\"Not Possible\") ",
       "test_list": [
         "assert min_Swaps(\"1101\",\"1110\") == 1",
         "assert min_Swaps(\"111\",\"000\") == \"Not Possible\"",
@@ -1071,7 +1071,7 @@
     {
       "task_id": 600,
       "text": "Write a python function to check whether the given number is even or not using bitwise operator.",
-      "code": "def is_Even(n) : \r\n    if (n^1 == n+1) :\r\n        return True; \r\n    else :\r\n        return False; ",
+      "code": "def is_Even(n): \r\n    if (n^1 == n+1):\r\n        return True; \r\n    else :\r\n        return False; ",
       "test_list": [
         "assert is_Even(1) == False",
         "assert is_Even(2) == True",

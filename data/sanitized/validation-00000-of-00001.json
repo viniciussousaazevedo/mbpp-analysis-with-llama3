@@ -16,7 +16,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 555,
       "prompt": "Write a python function to find the difference between the sum of cubes of the first n natural numbers and the sum of the first n natural numbers.",
-      "code": "def difference(n) :  \n    S = (n*(n + 1))//2;  \n    res = S*(S-1);  \n    return res;  ",
+      "code": "def difference(n):  \n    S = (n*(n + 1))//2;  \n    res = S*(S-1);  \n    return res;  ",
       "test_imports": [],
       "test_list": [
         "assert difference(3) == 30",
@@ -28,7 +28,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 556,
       "prompt": "Write a python function to count the number of pairs whose xor value is odd.",
-      "code": "def find_Odd_Pair(A,N) : \n    oddPair = 0\n    for i in range(0,N) :  \n        for j in range(i+1,N) :  \n            if ((A[i] ^ A[j]) % 2 != 0):  \n                oddPair+=1  \n    return oddPair  ",
+      "code": "def find_Odd_Pair(A,N): \n    oddPair = 0\n    for i in range(0,N):  \n        for j in range(i+1,N):  \n            if ((A[i] ^ A[j]) % 2 != 0):  \n                oddPair+=1  \n    return oddPair  ",
       "test_imports": [],
       "test_list": [
         "assert find_Odd_Pair([5,4,7,2,1],5) == 6",
@@ -448,7 +448,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 595,
       "prompt": "Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.",
-      "code": "def min_Swaps(str1,str2) : \n    count = 0\n    for i in range(len(str1)) :  \n        if str1[i] != str2[i] : \n            count += 1\n    if count % 2 == 0 : \n        return (count // 2) \n    else : \n        return (\"Not Possible\") ",
+      "code": "def min_Swaps(str1,str2): \n    count = 0\n    for i in range(len(str1)):  \n        if str1[i] != str2[i] : \n            count += 1\n    if count % 2 == 0 : \n        return (count // 2) \n    else : \n        return (\"Not Possible\") ",
       "test_imports": [],
       "test_list": [
         "assert min_Swaps(\"1101\",\"1110\") == 1",
@@ -508,7 +508,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 600,
       "prompt": "Write a python function to check whether the given number is even or not.",
-      "code": "def is_Even(n) : \n    if (n^1 == n+1) :\n        return True; \n    else :\n        return False; ",
+      "code": "def is_Even(n): \n    if (n^1 == n+1):\n        return True; \n    else :\n        return False; ",
       "test_imports": [],
       "test_list": [
         "assert is_Even(1) == False",

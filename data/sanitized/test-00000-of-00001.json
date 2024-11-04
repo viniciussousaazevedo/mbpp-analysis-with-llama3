@@ -28,7 +28,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 14,
       "prompt": "Write a python function to find the volume of a triangular prism.",
-      "code": "def find_Volume(l,b,h) : \n    return ((l * b * h) / 2) ",
+      "code": "def find_Volume(l,b,h): \n    return ((l * b * h) / 2) ",
       "test_imports": [],
       "test_list": [
         "assert find_Volume(10,8,6) == 240",
@@ -112,7 +112,7 @@
       "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
       "task_id": 57,
       "prompt": "Write a python function to find the largest number that can be formed with the given list of digits.",
-      "code": "def find_Max_Num(arr) : \n    n = len(arr)\n    arr.sort(reverse = True) \n    num = arr[0] \n    for i in range(1,n) : \n        num = num * 10 + arr[i] \n    return num ",
+      "code": "def find_Max_Num(arr): \n    n = len(arr)\n    arr.sort(reverse = True) \n    num = arr[0] \n    for i in range(1,n): \n        num = num * 10 + arr[i] \n    return num ",
       "test_imports": [],
       "test_list": [
         "assert find_Max_Num([1,2,3]) == 321",
@@ -749,7 +749,7 @@
       "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
       "task_id": 119,
       "prompt": "Write a python function to find the element that appears only once in a sorted array.",
-      "code": "def search(arr):\n    n = len(arr)\n    XOR = 0\n    for i in range(n) :\n        XOR = XOR ^ arr[i]\n    return (XOR)",
+      "code": "def search(arr):\n    n = len(arr)\n    XOR = 0\n    for i in range(n):\n        XOR = XOR ^ arr[i]\n    return (XOR)",
       "test_imports": [],
       "test_list": [
         "assert search([1,1,2,2,3]) == 3",
@@ -1641,7 +1641,7 @@
       "source_file": "Benchmark Questions Verification V2.ipynb",
       "task_id": 270,
       "prompt": "Write a python function to find the sum of even numbers at even positions of a list.",
-      "code": "def sum_even_and_even_index(arr):  \n    i = 0\n    sum = 0\n    for i in range(0, len(arr),2): \n        if (arr[i] % 2 == 0) : \n            sum += arr[i]  \n    return sum",
+      "code": "def sum_even_and_even_index(arr):  \n    i = 0\n    sum = 0\n    for i in range(0, len(arr),2): \n        if (arr[i] % 2 == 0): \n            sum += arr[i]  \n    return sum",
       "test_imports": [],
       "test_list": [
         "assert sum_even_and_even_index([5, 6, 12, 1, 18, 8]) == 30",
@@ -1977,7 +1977,7 @@
       "source_file": "Ellen's Copy of Benchmark Questions Verification V2.ipynb",
       "task_id": 304,
       "prompt": "Write a python function to find element at a given index after number of rotations.",
-      "code": "def find_Element(arr,ranges,rotations,index) :  \n    for i in range(rotations - 1,-1,-1 ) : \n        left = ranges[i][0] \n        right = ranges[i][1] \n        if (left <= index and right >= index) : \n            if (index == left) : \n                index = right \n            else : \n                index = index - 1 \n    return arr[index] ",
+      "code": "def find_Element(arr,ranges,rotations,index):  \n    for i in range(rotations - 1,-1,-1 ): \n        left = ranges[i][0] \n        right = ranges[i][1] \n        if (left <= index and right >= index): \n            if (index == left): \n                index = right \n            else : \n                index = index - 1 \n    return arr[index] ",
       "test_imports": [],
       "test_list": [
         "assert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3",
@@ -2601,7 +2601,7 @@
       "source_file": "charlessutton@: Benchmark Questions Verification V2.ipynb",
       "task_id": 435,
       "prompt": "Write a python function to find the last digit of a given number.",
-      "code": "def last_Digit(n) :\n    return (n % 10) ",
+      "code": "def last_Digit(n):\n    return (n % 10) ",
       "test_imports": [],
       "test_list": [
         "assert last_Digit(123) == 3",
@@ -2805,7 +2805,7 @@
       "source_file": "charlessutton@: Benchmark Questions Verification V2.ipynb",
       "task_id": 453,
       "prompt": "Write a python function to find the sum of even factors of a number.",
-      "code": "import math \ndef sumofFactors(n) : \n    if (n % 2 != 0) : \n        return 0\n    res = 1\n    for i in range(2, (int)(math.sqrt(n)) + 1) :    \n        count = 0\n        curr_sum = 1\n        curr_term = 1\n        while (n % i == 0) : \n            count= count + 1\n            n = n // i \n            if (i == 2 and count == 1) : \n                curr_sum = 0\n            curr_term = curr_term * i \n            curr_sum = curr_sum + curr_term \n        res = res * curr_sum  \n    if (n >= 2) : \n        res = res * (1 + n) \n    return res",
+      "code": "import math \ndef sumofFactors(n): \n    if (n % 2 != 0): \n        return 0\n    res = 1\n    for i in range(2, (int)(math.sqrt(n)) + 1):    \n        count = 0\n        curr_sum = 1\n        curr_term = 1\n        while (n % i == 0): \n            count= count + 1\n            n = n // i \n            if (i == 2 and count == 1): \n                curr_sum = 0\n            curr_term = curr_term * i \n            curr_sum = curr_sum + curr_term \n        res = res * curr_sum  \n    if (n >= 2): \n        res = res * (1 + n) \n    return res",
       "test_imports": [],
       "test_list": [
         "assert sumofFactors(18) == 26",
@@ -3081,7 +3081,7 @@
       "source_file": "charlessutton@: Benchmark Questions Verification V2.ipynb",
       "task_id": 479,
       "prompt": "Write a python function to find the first digit of a given number.",
-      "code": "def first_Digit(n) :  \n    while n >= 10:  \n        n = n / 10 \n    return int(n) ",
+      "code": "def first_Digit(n):  \n    while n >= 10:  \n        n = n / 10 \n    return int(n) ",
       "test_imports": [],
       "test_list": [
         "assert first_Digit(123) == 1",

@@ -42,7 +42,7 @@
     {
       "task_id": 14,
       "text": "Write a python function to find the volume of a triangular prism.",
-      "code": "def find_Volume(l,b,h) : \r\n    return ((l * b * h) / 2) ",
+      "code": "def find_Volume(l,b,h): \r\n    return ((l * b * h) / 2) ",
       "test_list": [
         "assert find_Volume(10,8,6) == 240",
         "assert find_Volume(3,2,2) == 6",
@@ -318,7 +318,7 @@
     {
       "task_id": 36,
       "text": "Write a python function to find the nth digit in the proper fraction of two given numbers.",
-      "code": "def find_Nth_Digit(p,q,N) :  \r\n    while (N > 0) : \r\n        N -= 1;  \r\n        p *= 10;  \r\n        res = p // q;  \r\n        p %= q;  \r\n    return res;  ",
+      "code": "def find_Nth_Digit(p,q,N):  \r\n    while (N > 0): \r\n        N -= 1;  \r\n        p *= 10;  \r\n        res = p // q;  \r\n        p %= q;  \r\n    return res;  ",
       "test_list": [
         "assert find_Nth_Digit(1,2,1) == 5",
         "assert find_Nth_Digit(3,5,1) == 6",
@@ -578,7 +578,7 @@
     {
       "task_id": 57,
       "text": "Write a python function to find the largest number that can be formed with the given digits.",
-      "code": "def find_Max_Num(arr,n) : \r\n    arr.sort(reverse = True) \r\n    num = arr[0] \r\n    for i in range(1,n) : \r\n        num = num * 10 + arr[i] \r\n    return num ",
+      "code": "def find_Max_Num(arr,n): \r\n    arr.sort(reverse = True) \r\n    num = arr[0] \r\n    for i in range(1,n): \r\n        num = num * 10 + arr[i] \r\n    return num ",
       "test_list": [
         "assert find_Max_Num([1,2,3],3) == 321",
         "assert find_Max_Num([4,5,6,1],4) == 6541",
@@ -1178,7 +1178,7 @@
     {
       "task_id": 107,
       "text": "Write a python function to count hexadecimal numbers for a given range.",
-      "code": "def count_Hexadecimal(L,R) :  \r\n    count = 0;  \r\n    for i in range(L,R + 1) : \r\n        if (i >= 10 and i <= 15) : \r\n            count += 1;  \r\n        elif (i > 15) : \r\n            k = i;  \r\n            while (k != 0) :  \r\n                if (k % 16 >= 10) : \r\n                    count += 1;  \r\n                k = k // 16;  \r\n    return count;  ",
+      "code": "def count_Hexadecimal(L,R):  \r\n    count = 0;  \r\n    for i in range(L,R + 1): \r\n        if (i >= 10 and i <= 15): \r\n            count += 1;  \r\n        elif (i > 15): \r\n            k = i;  \r\n            while (k != 0):  \r\n                if (k % 16 >= 10): \r\n                    count += 1;  \r\n                k = k // 16;  \r\n    return count;  ",
       "test_list": [
         "assert count_Hexadecimal(10,15) == 6",
         "assert count_Hexadecimal(2,4) == 0",
@@ -1238,7 +1238,7 @@
     {
       "task_id": 112,
       "text": "Write a python function to find the perimeter of a cylinder.",
-      "code": "def perimeter(diameter,height) : \r\n    return 2*(diameter+height)  ",
+      "code": "def perimeter(diameter,height): \r\n    return 2*(diameter+height)  ",
       "test_list": [
         "assert perimeter(2,4) == 12",
         "assert perimeter(1,2) == 6",
@@ -1322,7 +1322,7 @@
     {
       "task_id": 119,
       "text": "Write a python function to find the element that appears only once in a sorted array.",
-      "code": "def search(arr,n) :\r\n    XOR = 0\r\n    for i in range(n) :\r\n        XOR = XOR ^ arr[i]\r\n    return (XOR)",
+      "code": "def search(arr,n):\r\n    XOR = 0\r\n    for i in range(n):\r\n        XOR = XOR ^ arr[i]\r\n    return (XOR)",
       "test_list": [
         "assert search([1,1,2,2,3],5) == 3",
         "assert search([1,1,3,3,4,4,5,5,7,7,8],11) == 8",
@@ -1670,7 +1670,7 @@
     {
       "task_id": 148,
       "text": "Write a function to divide a number into two parts such that the sum of digits is maximum.",
-      "code": "def sum_digits_single(x) : \r\n    ans = 0\r\n    while x : \r\n        ans += x % 10\r\n        x //= 10  \r\n    return ans \r\ndef closest(x) : \r\n    ans = 0\r\n    while (ans * 10 + 9 <= x) : \r\n        ans = ans * 10 + 9  \r\n    return ans   \r\ndef sum_digits_twoparts(N) : \r\n    A = closest(N)  \r\n    return sum_digits_single(A) + sum_digits_single(N - A) ",
+      "code": "def sum_digits_single(x): \r\n    ans = 0\r\n    while x : \r\n        ans += x % 10\r\n        x //= 10  \r\n    return ans \r\ndef closest(x): \r\n    ans = 0\r\n    while (ans * 10 + 9 <= x): \r\n        ans = ans * 10 + 9  \r\n    return ans   \r\ndef sum_digits_twoparts(N): \r\n    A = closest(N)  \r\n    return sum_digits_single(A) + sum_digits_single(N - A) ",
       "test_list": [
         "assert sum_digits_twoparts(35)==17",
         "assert sum_digits_twoparts(7)==7",
@@ -1754,7 +1754,7 @@
     {
       "task_id": 155,
       "text": "Write a python function to toggle all even bits of a given number.",
-      "code": "def even_bit_toggle_number(n) : \r\n    res = 0; count = 0; temp = n \r\n    while (temp > 0) :     \r\n        if (count % 2 == 1) : \r\n            res = res | (1 << count)      \r\n        count = count + 1\r\n        temp >>= 1 \r\n    return n ^ res ",
+      "code": "def even_bit_toggle_number(n): \r\n    res = 0; count = 0; temp = n \r\n    while (temp > 0):     \r\n        if (count % 2 == 1): \r\n            res = res | (1 << count)      \r\n        count = count + 1\r\n        temp >>= 1 \r\n    return n ^ res ",
       "test_list": [
         "assert even_bit_toggle_number(10) == 0",
         "assert even_bit_toggle_number(20) == 30",
@@ -2330,7 +2330,7 @@
     {
       "task_id": 203,
       "text": "Write a python function to find the hamming distance between given two integers.",
-      "code": "def hamming_Distance(n1,n2) : \r\n    x = n1 ^ n2  \r\n    setBits = 0\r\n    while (x > 0) : \r\n        setBits += x & 1\r\n        x >>= 1\r\n    return setBits  ",
+      "code": "def hamming_Distance(n1,n2): \r\n    x = n1 ^ n2  \r\n    setBits = 0\r\n    while (x > 0): \r\n        setBits += x & 1\r\n        x >>= 1\r\n    return setBits  ",
       "test_list": [
         "assert hamming_Distance(4,8) == 2",
         "assert hamming_Distance(2,4) == 2",
@@ -2342,7 +2342,7 @@
     {
       "task_id": 204,
       "text": "Write a python function to count the occurrence of a given character in a string.",
-      "code": "def count(s,c) : \r\n    res = 0 \r\n    for i in range(len(s)) : \r\n        if (s[i] == c): \r\n            res = res + 1\r\n    return res ",
+      "code": "def count(s,c): \r\n    res = 0 \r\n    for i in range(len(s)): \r\n        if (s[i] == c): \r\n            res = res + 1\r\n    return res ",
       "test_list": [
         "assert count(\"abcc\",\"c\") == 2",
         "assert count(\"ababca\",\"a\") == 3",
@@ -2438,7 +2438,7 @@
     {
       "task_id": 212,
       "text": "Write a python function to find the sum of fourth power of n natural numbers.",
-      "code": "import math  \r\ndef fourth_Power_Sum(n): \r\n    sum = 0\r\n    for i in range(1,n+1) : \r\n        sum = sum + (i*i*i*i) \r\n    return sum",
+      "code": "import math  \r\ndef fourth_Power_Sum(n): \r\n    sum = 0\r\n    for i in range(1,n+1): \r\n        sum = sum + (i*i*i*i) \r\n    return sum",
       "test_list": [
         "assert fourth_Power_Sum(2) == 17",
         "assert fourth_Power_Sum(4) == 354",
@@ -3134,7 +3134,7 @@
     {
       "task_id": 270,
       "text": "Write a python function to find the sum of even numbers at even positions.",
-      "code": "def sum_even_and_even_index(arr,n):  \r\n    i = 0\r\n    sum = 0\r\n    for i in range(0,n,2): \r\n        if (arr[i] % 2 == 0) : \r\n            sum += arr[i]  \r\n    return sum",
+      "code": "def sum_even_and_even_index(arr,n):  \r\n    i = 0\r\n    sum = 0\r\n    for i in range(0,n,2): \r\n        if (arr[i] % 2 == 0): \r\n            sum += arr[i]  \r\n    return sum",
       "test_list": [
         "assert sum_even_and_even_index([5, 6, 12, 1, 18, 8],6) == 30",
         "assert sum_even_and_even_index([3, 20, 17, 9, 2, 10, 18, 13, 6, 18],10) == 26",
@@ -3542,7 +3542,7 @@
     {
       "task_id": 304,
       "text": "Write a python function to find element at a given index after number of rotations.",
-      "code": "def find_Element(arr,ranges,rotations,index) :  \r\n    for i in range(rotations - 1,-1,-1 ) : \r\n        left = ranges[i][0] \r\n        right = ranges[i][1] \r\n        if (left <= index and right >= index) : \r\n            if (index == left) : \r\n                index = right \r\n            else : \r\n                index = index - 1 \r\n    return arr[index] ",
+      "code": "def find_Element(arr,ranges,rotations,index):  \r\n    for i in range(rotations - 1,-1,-1 ): \r\n        left = ranges[i][0] \r\n        right = ranges[i][1] \r\n        if (left <= index and right >= index): \r\n            if (index == left): \r\n                index = right \r\n            else : \r\n                index = index - 1 \r\n    return arr[index] ",
       "test_list": [
         "assert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3",
         "assert find_Element([1,2,3,4],[[0,1],[0,2]],1,2) == 3",
@@ -3662,7 +3662,7 @@
     {
       "task_id": 314,
       "text": "Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.",
-      "code": "def max_sum_rectangular_grid(grid, n) : \r\n\tincl = max(grid[0][0], grid[1][0]) \r\n\texcl = 0\r\n\tfor i in range(1, n) : \r\n\t\texcl_new = max(excl, incl) \r\n\t\tincl = excl + max(grid[0][i], grid[1][i]) \r\n\t\texcl = excl_new \r\n\treturn max(excl, incl)",
+      "code": "def max_sum_rectangular_grid(grid, n): \r\n\tincl = max(grid[0][0], grid[1][0]) \r\n\texcl = 0\r\n\tfor i in range(1, n): \r\n\t\texcl_new = max(excl, incl) \r\n\t\tincl = excl + max(grid[0][i], grid[1][i]) \r\n\t\texcl = excl_new \r\n\treturn max(excl, incl)",
       "test_list": [
         "assert max_sum_rectangular_grid([ [1, 4, 5], [2, 0, 0 ] ], 3) == 7",
         "assert max_sum_rectangular_grid([ [ 1, 2, 3, 4, 5], [ 6, 7, 8, 9, 10] ], 5) == 24",
@@ -3902,7 +3902,7 @@
     {
       "task_id": 334,
       "text": "Write a python function to check whether the triangle is valid or not if sides are given.",
-      "code": "def check_Validity(a,b,c):  \r\n    if (a + b <= c) or (a + c <= b) or (b + c <= a) : \r\n        return False\r\n    else: \r\n        return True        ",
+      "code": "def check_Validity(a,b,c):  \r\n    if (a + b <= c) or (a + c <= b) or (b + c <= a): \r\n        return False\r\n    else: \r\n        return True        ",
       "test_list": [
         "assert check_Validity(1,2,3) == False",
         "assert check_Validity(2,3,5) == False",
@@ -4082,7 +4082,7 @@
     {
       "task_id": 349,
       "text": "Write a python function to check whether the given string is a binary string or not.",
-      "code": "def check(string) :\r\n    p = set(string) \r\n    s = {'0', '1'} \r\n    if s == p or p == {'0'} or p == {'1'}: \r\n        return (\"Yes\") \r\n    else : \r\n        return (\"No\") ",
+      "code": "def check(string):\r\n    p = set(string) \r\n    s = {'0', '1'} \r\n    if s == p or p == {'0'} or p == {'1'}: \r\n        return (\"Yes\") \r\n    else : \r\n        return (\"No\") ",
       "test_list": [
         "assert check(\"01010101010\") == \"Yes\"",
         "assert check(\"name0\") == \"No\"",
@@ -4094,7 +4094,7 @@
     {
       "task_id": 350,
       "text": "Write a python function to minimize the length of the string by removing occurrence of only one character.",
-      "code": "def minimum_Length(s) : \r\n    maxOcc = 0\r\n    n = len(s) \r\n    arr = [0]*26\r\n    for i in range(n) : \r\n        arr[ord(s[i]) -ord('a')] += 1\r\n    for i in range(26) : \r\n        if arr[i] > maxOcc : \r\n            maxOcc = arr[i] \r\n    return n - maxOcc ",
+      "code": "def minimum_Length(s): \r\n    maxOcc = 0\r\n    n = len(s) \r\n    arr = [0]*26\r\n    for i in range(n): \r\n        arr[ord(s[i]) -ord('a')] += 1\r\n    for i in range(26): \r\n        if arr[i] > maxOcc : \r\n            maxOcc = arr[i] \r\n    return n - maxOcc ",
       "test_list": [
         "assert minimum_Length(\"mnm\") == 1",
         "assert minimum_Length(\"abcda\") == 3",
@@ -4154,7 +4154,7 @@
     {
       "task_id": 355,
       "text": "Write a python function to count the number of rectangles in a circle of radius r.",
-      "code": "def count_Rectangles(radius):  \r\n    rectangles = 0 \r\n    diameter = 2 * radius \r\n    diameterSquare = diameter * diameter \r\n    for a in range(1, 2 * radius):  \r\n        for b in range(1, 2 * radius): \r\n            diagnalLengthSquare = (a * a +  b * b)  \r\n            if (diagnalLengthSquare <= diameterSquare) : \r\n                rectangles += 1\r\n    return rectangles ",
+      "code": "def count_Rectangles(radius):  \r\n    rectangles = 0 \r\n    diameter = 2 * radius \r\n    diameterSquare = diameter * diameter \r\n    for a in range(1, 2 * radius):  \r\n        for b in range(1, 2 * radius): \r\n            diagnalLengthSquare = (a * a +  b * b)  \r\n            if (diagnalLengthSquare <= diameterSquare): \r\n                rectangles += 1\r\n    return rectangles ",
       "test_list": [
         "assert count_Rectangles(2) == 8",
         "assert count_Rectangles(1) == 1",
@@ -4418,7 +4418,7 @@
     {
       "task_id": 377,
       "text": "Write a python function to remove all occurrences of a character in a given string.",
-      "code": "def remove_Char(s,c) :  \r\n    counts = s.count(c) \r\n    s = list(s) \r\n    while counts :  \r\n        s.remove(c) \r\n        counts -= 1 \r\n    s = '' . join(s)   \r\n    return (s) ",
+      "code": "def remove_Char(s,c):  \r\n    counts = s.count(c) \r\n    s = list(s) \r\n    while counts :  \r\n        s.remove(c) \r\n        counts -= 1 \r\n    s = '' . join(s)   \r\n    return (s) ",
       "test_list": [
         "assert remove_Char(\"aba\",'a') == \"b\"",
         "assert remove_Char(\"toggle\",'g') == \"tole\"",
@@ -4490,7 +4490,7 @@
     {
       "task_id": 383,
       "text": "Write a python function to toggle all odd bits of a given number.",
-      "code": "def even_bit_toggle_number(n) : \r\n    res = 0; count = 0; temp = n    \r\n    while(temp > 0 ) : \r\n        if (count % 2 == 0) : \r\n            res = res | (1 << count)      \r\n        count = count + 1\r\n        temp >>= 1 \r\n    return n ^ res ",
+      "code": "def even_bit_toggle_number(n): \r\n    res = 0; count = 0; temp = n    \r\n    while(temp > 0 ): \r\n        if (count % 2 == 0): \r\n            res = res | (1 << count)      \r\n        count = count + 1\r\n        temp >>= 1 \r\n    return n ^ res ",
       "test_list": [
         "assert even_bit_toggle_number(10) == 15",
         "assert even_bit_toggle_number(20) == 1",
@@ -5114,7 +5114,7 @@
     {
       "task_id": 435,
       "text": "Write a python function to find the last digit of a given number.",
-      "code": "def last_Digit(n) :\r\n    return (n % 10) ",
+      "code": "def last_Digit(n):\r\n    return (n % 10) ",
       "test_list": [
         "assert last_Digit(123) == 3",
         "assert last_Digit(25) == 5",
@@ -5330,7 +5330,7 @@
     {
       "task_id": 453,
       "text": "Write a python function to find the sum of even factors of a number.",
-      "code": "import math \r\ndef sumofFactors(n) : \r\n    if (n % 2 != 0) : \r\n        return 0\r\n    res = 1\r\n    for i in range(2, (int)(math.sqrt(n)) + 1) :    \r\n        count = 0\r\n        curr_sum = 1\r\n        curr_term = 1\r\n        while (n % i == 0) : \r\n            count= count + 1\r\n            n = n // i \r\n            if (i == 2 and count == 1) : \r\n                curr_sum = 0\r\n            curr_term = curr_term * i \r\n            curr_sum = curr_sum + curr_term \r\n        res = res * curr_sum  \r\n    if (n >= 2) : \r\n        res = res * (1 + n) \r\n    return res ",
+      "code": "import math \r\ndef sumofFactors(n): \r\n    if (n % 2 != 0): \r\n        return 0\r\n    res = 1\r\n    for i in range(2, (int)(math.sqrt(n)) + 1):    \r\n        count = 0\r\n        curr_sum = 1\r\n        curr_term = 1\r\n        while (n % i == 0): \r\n            count= count + 1\r\n            n = n // i \r\n            if (i == 2 and count == 1): \r\n                curr_sum = 0\r\n            curr_term = curr_term * i \r\n            curr_sum = curr_sum + curr_term \r\n        res = res * curr_sum  \r\n    if (n >= 2): \r\n        res = res * (1 + n) \r\n    return res ",
       "test_list": [
         "assert sumofFactors(18) == 26",
         "assert sumofFactors(30) == 48",
@@ -5642,7 +5642,7 @@
     {
       "task_id": 479,
       "text": "Write a python function to find the first digit of a given number.",
-      "code": "def first_Digit(n) :  \r\n    while n >= 10:  \r\n        n = n / 10; \r\n    return int(n) ",
+      "code": "def first_Digit(n):  \r\n    while n >= 10:  \r\n        n = n / 10; \r\n    return int(n) ",
       "test_list": [
         "assert first_Digit(123) == 1",
         "assert first_Digit(456) == 4",
@@ -5714,7 +5714,7 @@
     {
       "task_id": 485,
       "text": "Write a function to find the largest palindromic number in the given array.",
-      "code": "def is_palindrome(n) : \r\n\tdivisor = 1\r\n\twhile (n / divisor >= 10) : \r\n\t\tdivisor *= 10\r\n\twhile (n != 0) : \r\n\t\tleading = n // divisor \r\n\t\ttrailing = n % 10\r\n\t\tif (leading != trailing) : \r\n\t\t\treturn False\r\n\t\tn = (n % divisor) // 10\r\n\t\tdivisor = divisor // 100\r\n\treturn True\r\ndef largest_palindrome(A, n) : \r\n\tA.sort() \r\n\tfor i in range(n - 1, -1, -1) : \r\n\t\tif (is_palindrome(A[i])) : \r\n\t\t\treturn A[i] \r\n\treturn -1",
+      "code": "def is_palindrome(n): \r\n\tdivisor = 1\r\n\twhile (n / divisor >= 10): \r\n\t\tdivisor *= 10\r\n\twhile (n != 0): \r\n\t\tleading = n // divisor \r\n\t\ttrailing = n % 10\r\n\t\tif (leading != trailing): \r\n\t\t\treturn False\r\n\t\tn = (n % divisor) // 10\r\n\t\tdivisor = divisor // 100\r\n\treturn True\r\ndef largest_palindrome(A, n): \r\n\tA.sort() \r\n\tfor i in range(n - 1, -1, -1): \r\n\t\tif (is_palindrome(A[i])): \r\n\t\t\treturn A[i] \r\n\treturn -1",
       "test_list": [
         "assert largest_palindrome([1, 232, 54545, 999991], 4) == 54545",
         "assert largest_palindrome([1, 2, 3, 4, 5, 50], 6) == 5",
@@ -6002,7 +6002,7 @@
     {
       "task_id": 509,
       "text": "Write a python function to find the average of odd numbers till a given odd number.",
-      "code": "def average_Odd(n) : \r\n    if (n%2==0) : \r\n        return (\"Invalid Input\") \r\n        return -1 \r\n    sm =0\r\n    count =0\r\n    while (n>=1) : \r\n        count=count+1\r\n        sm = sm + n \r\n        n = n-2\r\n    return sm//count ",
+      "code": "def average_Odd(n): \r\n    if (n%2==0): \r\n        return (\"Invalid Input\") \r\n        return -1 \r\n    sm =0\r\n    count =0\r\n    while (n>=1): \r\n        count=count+1\r\n        sm = sm + n \r\n        n = n-2\r\n    return sm//count ",
       "test_list": [
         "assert average_Odd(9) == 5",
         "assert average_Odd(5) == 3",
