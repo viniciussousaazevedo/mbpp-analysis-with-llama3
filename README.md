@@ -1,7 +1,7 @@
 # Mbpp Script for LLM analysis
 
 ## O que foi feito?
-Basicamente, utilizei o dataset do [mbpp](https://huggingface.co/datasets/google-research-datasets/mbpp), que contém descrições de problemas de programação juntamente com solução e testes da solução, para observar como o Llama 3.1 70B cria sua própria suíte de testes por meio de uma integração com RAG simples. O que fiz foi criar uma cópia de cada problema removendo a suíte de testes e solicitando para a LLM criar a sua própria. Uma vez isso feito, comparei o quão bem sucedida a LLM se saiu principalmente em comparação com os testes do próprio dataset que apontam sucesso nos seus códigos de resolução de problemas.
+Basicamente, utilizei o dataset do [mbpp](https://huggingface.co/datasets/google-research-datasets/mbpp), que contém descrições de problemas de programação juntamente com solução e testes da solução, para observar como o Llama 3.1 70B cria sua própria suíte de testes. O que fiz foi criar uma cópia de cada problema removendo a suíte de testes e solicitando para a LLM criar a sua própria. Uma vez isso feito, comparei o quão bem sucedida a LLM se saiu principalmente em comparação com os testes do próprio dataset que apontam sucesso nos seus códigos de resolução de problemas.
 
 ## Como rodar?
 1. Instalar a dependência do `Groq` com `pip`:
